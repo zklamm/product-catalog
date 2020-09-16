@@ -1,0 +1,95 @@
+@import url(whitespace-reset.css);
+
+body {
+  background: #FCD533;
+  color: #222222;
+  font: normal 16px Helvetica, Arial, sans-serif;
+  margin: 0 auto;
+  width: 900px;
+}
+
+header {
+  background: #267EC1;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  margin-bottom: 30px;
+  padding: 31px 25px 30px;
+}
+  header h1 {
+    color: #FFFFFF;
+    font-size: 38px;
+    font-weight: 9000;
+    letter-spacing: .25px;
+  }
+
+main {
+  background: #ECECEC;
+  padding: 0 25px 42px;
+}
+  main h2 {
+    color: #222222;
+    font-size: 32px;
+    padding: 25px 0;
+  }
+  main ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "p1 p2 p3 p4"
+      "p5 p6 .  .";
+    grid-gap: 17px;
+  }
+    main li.p1 { grid-area: p1; }
+    main li.p2 { grid-area: p2; }
+    main li.p3 { grid-area: p3; }
+    main li.p4 { grid-area: p4; }
+    main li.p5 { grid-area: p5; }
+    main li.p6 { grid-area: p6; }
+
+  main li {
+    background: #FFFFFF;
+    padding: 15px;
+  }
+  main label {
+    color: #000000;
+    text-decoration: none;
+  }
+  main h3 {
+    color: #222222;
+    font-size: 19px;
+    letter-spacing: .1px;
+    padding: 0 0 5px 0;
+  }
+  main figure {
+    height: 160px;
+    width: 100%;
+  }
+  main img {
+    display: block;
+    height: 140px;
+    margin: 0 auto;
+    width: auto;
+  }
+  main p {
+    color: #222222;
+  }
+  input[type="checkbox"] { display: none; }
+  input:checked + figure img {
+    left: 50%;
+    height: auto;
+    margin: 0 0 0 -200px;
+    position: absolute;
+    top: 100px;
+    width: 400px;
+    z-index: 2;
+  }
+  input:checked + figure::before {
+    background: rgba(0, 0, 0, .4);
+    bottom: 0;
+    content: "";
+    left: 0;
+    right: 0;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
